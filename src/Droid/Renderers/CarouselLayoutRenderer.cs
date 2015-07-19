@@ -124,5 +124,16 @@ namespace SwippableBottomTabView.Droid.Renderers
             var carouselLayout = (CarouselLayout)this.Element;
             _scrollView.ScrollTo(carouselLayout.SelectedIndex * Width, 0);
         }
+		
+		protected override void OnSizeChanged(int width, int height, int oldWidth, int oldHeight)
+        {
+            // if the screen width changed
+            if (_initialized && (width != oldWidth))
+            {
+                // signal that on next Draw we will need ScrollView adjustment
+                _initialized = false;
+            }
+            base.OnSizeChanged(width, height, oldWidth, oldHeight);
+        }
     }
 }
