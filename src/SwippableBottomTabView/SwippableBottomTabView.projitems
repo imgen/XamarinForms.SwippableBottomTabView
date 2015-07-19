@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{77990895-4247-4E5A-9474-E3456B62A28D}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SwippableBottomTabView</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CarouselLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DynamicTemplateLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HomePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TabPageOne.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TabPageTwo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SwitcherPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PagerIndicatorDots.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PagerIndicatorTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ICarouselViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SwitcherPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HomeView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabbedPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabOneViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabTwoViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
+  </ItemGroup>
+</Project>
