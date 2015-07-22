@@ -20,6 +20,7 @@ namespace SwippableBottomTabView
             VerticalOptions = LayoutOptions.Center;
             DotColor = Color.Black;
             Device.OnPlatform(iOS: () => BackgroundColor = Color.Gray);
+            RowSpacing = ColumnSpacing = 0;
 
             var assembly = typeof(PagerIndicatorTabs).GetTypeInfo().Assembly;
             foreach (var res in assembly.GetManifestResourceNames())
@@ -36,9 +37,9 @@ namespace SwippableBottomTabView
                 var tab = new StackLayout
                 {
                     Orientation = StackOrientation.Vertical,
-                    HorizontalOptions = LayoutOptions.Center,
-                    VerticalOptions = LayoutOptions.Center,
-                    Padding = new Thickness(7),
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    Padding = new Thickness(7)
                 };
                 Device.OnPlatform(
                     iOS: () =>
