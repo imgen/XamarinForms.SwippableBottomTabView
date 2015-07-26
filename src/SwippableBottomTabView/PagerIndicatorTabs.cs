@@ -45,7 +45,12 @@ namespace SwippableBottomTabView
                     iOS: () =>
                     {
                         tab.Children.Add(new Image { Source = "pin.png", HeightRequest = 20 });
-                        tab.Children.Add(new Label { Text = "Tab " + (index + 1), FontSize = 11 });
+                        tab.Children.Add(new Label 
+                        { 
+                            Text = "Tab " + (index + 1), 
+                            FontSize = 11, 
+                            HorizontalOptions = LayoutOptions.CenterAndExpand 
+                        });
                     },
                     Android: () =>
                     {
